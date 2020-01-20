@@ -15,7 +15,10 @@ def home(request):
 	# retrieve news objects from the deb
 	news = News.objects.all()
 
-	return render(request, 'front/home.html', {'pagetitle':pagetitle, 'sosmed':sosmed, 'news':news})
+	return render(request, 'front/home.html', {
+		'pagetitle':pagetitle, 
+		'sosmed':sosmed, 
+		'news':news})
 
 def about(request):
 

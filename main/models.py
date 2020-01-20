@@ -13,5 +13,8 @@ class Main(models.Model):
 	istg  = models.TextField(default='-')
 	ytb   = models.TextField(default='-')
 
+	set_name   = models.TextField(default='-')
+
 	def __str__(self):
-		return self.name
+		# return self.name		
+		return self.set_name + ' | ' + str(self.pk)

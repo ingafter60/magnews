@@ -6,12 +6,12 @@ from .models import News
 
 # Create your views here.
 
-def news_detail(request,pk):
+def news_detail(request,word):
 
 	pagetitle = Main.objects.get(pk=2)
 	sosmed = Main.objects.get(pk=2)
 
-	news = News.objects.filter(pk=pk)
+	news = News.objects.filter(name=word)
 
 	return render(request, 'front/news_detail.html', {
 		'news':news,

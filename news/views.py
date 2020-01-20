@@ -17,3 +17,7 @@ def news_detail(request,word):
 		'news':news,
 		'pagetitle':pagetitle, 
 		'sosmed':sosmed})
+
+def news_list(request):
+
+	return render(request, 'back/news_list.html', {})	

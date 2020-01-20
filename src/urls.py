@@ -4,5 +4,6 @@ from django.urls import path
 
 urlpatterns = [
     url(r'', include('main.urls')),
+    url(r'', include('news.urls')),
     url(r'^admin/', admin.site.urls),
 ]

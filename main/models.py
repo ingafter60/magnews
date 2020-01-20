@@ -6,14 +6,16 @@ from django.db import models
 
 class Main(models.Model):
 
-	name  = models.TextField()
-	about = models.TextField(null=True)
-	fb    = models.TextField(default='-')
-	twt   = models.TextField(default='-')
-	istg  = models.TextField(default='-')
-	ytb   = models.TextField(default='-')
+	name  = models.CharField(max_length=150)
+	about = models.CharField(max_length=150)
+	fb    = models.CharField(max_length=150)
+	twt   = models.CharField(max_length=150)
+	istg  = models.CharField(max_length=150)
+	ytb   = models.CharField(max_length=150)
+	phone = models.CharField(max_length=100)
+	website  = models.CharField(max_length=150)
 
-	set_name   = models.TextField(default='-')
+	set_name   = models.CharField(max_length=150)
 
 	def __str__(self):
 		# return self.name		

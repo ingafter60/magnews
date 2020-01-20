@@ -12,7 +12,6 @@ class News(models.Model):
 	date 			= models.CharField(max_length=12)
 	pic 			= models.TextField()
 	writer 		= models.CharField(max_length=50)
-	name  		= models.CharField(max_length=150)
 
 	def __str__(self):
 		return self.name		

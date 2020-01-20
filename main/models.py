@@ -6,8 +6,12 @@ from django.db import models
 
 class Main(models.Model):
 
-	name = models.TextField()
+	name  = models.TextField()
 	about = models.TextField(null=True)
+	fb    = models.TextField(default='-')
+	twt   = models.TextField(default='-')
+	istg  = models.TextField(default='-')
+	ytb   = models.TextField(default='-')
 
 	def __str__(self):
 		return self.name

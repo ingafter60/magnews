@@ -68,19 +68,16 @@
                         <a href="#" class="left-topbar-item"></a>
                      </div>
                      <div class="right-topbar p-l-18">
-                        <a href="#">
+                        <a href="{{sosmed.fb}}">
                         <span class="fab fa-facebook-f"></span>
                         </a>
-                        <a href="#">
+                        <a href="{{sosmed.twt}}">
                         <span class="fab fa-twitter"></span>
                         </a>
-                        <a href="#">
-                        <span class="fab fa-pinterest-p"></span>
+                        <a href="{{sosmed.istg}}">
+                        <span class="fab fa-instagram"></span>
                         </a>
-                        <a href="#">
-                        <span class="fab fa-vimeo-v"></span>
-                        </a>
-                        <a href="#">
+                        <a href="{{sosmed.ytb}}">
                         <span class="fab fa-youtube"></span>
                         </a>
                      </div>
@@ -1825,31 +1822,29 @@
                <div class="row">
                   <div class="col-lg-4 p-b-20">
                      <div class="size-h-3 flex-s-c">
-                        <a href="index.html">
+                        <a href="{% url 'home' %}">
                         <img class="max-s-full" src="{% static 'front/images/icons/logo-02.png' %}" alt="LOGO">
                         </a>
                      </div>
                      <div>
                         <p class="f1-s-1 cl11 p-b-16">
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor magna eget elit efficitur, at accumsan sem placerat. Nulla tellus libero, mattis nec molestie at, facilisis ut turpis. Vestibulum dolor metus, tincidunt eget odio
+                           {{ pagetitle.about }}
                         </p>
                         <p class="f1-s-1 cl11 p-b-16">
                            Any questions? Call us on (+1) 96 716 6879
                         </p>
                         <div class="p-t-15">
-                           <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                           <a href="{{ sosmed.fb }}" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
                            <span class="fab fa-facebook-f"></span>
                            </a>
-                           <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                           <a href="{{ sosmed.twt }}" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
                            <span class="fab fa-twitter"></span>
                            </a>
-                           <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
-                           <span class="fab fa-pinterest-p"></span>
+                           <a href="{{ sosmed.istg }}" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                           <span class="fab fa-instagram"></span>
                            </a>
-                           <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
-                           <span class="fab fa-vimeo-v"></span>
                            </a>
-                           <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                           <a href="{{ sosmed.ytb }}" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
                            <span class="fab fa-youtube"></span>
                            </a>
                         </div>

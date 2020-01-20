@@ -9,12 +9,14 @@ def home(request):
 
 	# pagetitle = 'Home | MAGNews'
 	pagetitle = Main.objects.get(pk=2)
+	sosmed = Main.objects.get(pk=2)
 
-	return render(request, 'front/home.html', {'pagetitle':pagetitle})
+	return render(request, 'front/home.html', {'pagetitle':pagetitle, 'sosmed':sosmed})
 
 def about(request):
 
 	# pagetitle = 'About | MAGNews'
 	pagetitle = Main.objects.get(pk=2)
+	sosmed = Main.objects.get(pk=2)
 
-	return render(request, 'front/about.html', {'pagetitle':pagetitle})
+	return render(request, 'front/about.html', {'pagetitle':pagetitle, 'sosmed':sosmed})

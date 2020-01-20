@@ -27,3 +27,9 @@ def about(request):
 	sosmed = Main.objects.get(pk=2)
 
 	return render(request, 'front/about.html', {'pagetitle':pagetitle, 'sosmed':sosmed})
+
+# ADMIN
+
+def panel(request):
+
+	return render(request, 'back/home.html')		

@@ -20,4 +20,7 @@ def news_detail(request,word):
 
 def news_list(request):
 
-	return render(request, 'back/news_list.html', {})	
+	# Retrieve data from db
+	news = News.objects.all()
+
+	return render(request, 'back/news_list.html', {'news':news})	

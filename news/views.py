@@ -27,6 +27,7 @@ def news_list(request):
 
 def news_add(request):
 
+	print("Form is working now ..")
 
 	return render(request, 'back/news_add.html', {})	
 

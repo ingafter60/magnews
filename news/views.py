@@ -24,3 +24,9 @@ def news_list(request):
 	news = News.objects.all()
 
 	return render(request, 'back/news_list.html', {'news':news})	
+
+def news_add(request):
+
+
+	return render(request, 'back/news_add.html', {})	
+

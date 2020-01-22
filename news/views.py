@@ -48,21 +48,28 @@ def news_add(request):
 			filename = fs.save(myfile.name, myfile)
 			url = fs.url(filename)	
 
-			b = News(
-				name		  = newstitle,
-				short_text = newstxtshort,
-				body_text  = newstxt,
-				date 		  = "2020",
-				picname 	  = filename,
-				picurl 	  = url,
-				writer 	  = "-",
-				catname 	  = newscat,
-				catid 	  = 0,
-				show 		  = 0
-			)	
+			if str(myfile.content_type).startswith("image"):
 
-			b.save()
-			return redirect('news_list')
+				b = News(
+					name		  = newstitle,
+					short_text = newstxtshort,
+					body_text  = newstxt,
+					date 		  = "2020",
+					picname 	  = filename,
+					picurl 	  = url,
+					writer 	  = "-",
+					catname 	  = newscat,
+					catid 	  = 0,
+					show 		  = 0
+				)	
+
+				b.save()
+				return redirect('news_list')
+
+			else :
+
+				error = "Your file is not supported"
+				return render(request, 'back/error.html', {'error':error})	
 
 		except:
 			error = "Please input your image"

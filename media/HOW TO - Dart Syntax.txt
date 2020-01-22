@@ -1,0 +1,61 @@
+
+void main() {
+  print ('Hi there');
+  // This is one line comment
+  /*
+  * This is a multiple line of comments
+  * This is also a comment
+  */
+  
+  // integer
+  int x = 2;
+  print(x);
+  
+  // double
+  double y = 2.2;
+  print(y);
+  
+  // variable
+  var name = 'ing';
+  print(name);
+  
+  // string
+  String fullname = 'inyoman gurnitha';
+  print(fullname);
+  
+  // constant (the value of a constant CAN NOT be changed, as in variable)
+  const name2 = 'ING2';
+  print(name2);
+  
+  // variable interaction
+  int a = 20;
+  int b = 11;
+  print(a+b);
+  print(a*b);
+  print(a-b);
+  print(a/b);
+  
+  // concatination of string
+  String fname = 'i nyoman ';
+  String lname = 'gurnitha';
+  print(fname + lname);
+  
+  // String interpolation
+  String namaPertama = "Wayan";
+  String namaKedua   = "Ayun";
+  print("$namaPertama $namaKedua");
+  print('nama lengkapnya adalah $namaPertama $namaKedua');
+  
+  // conditions (try to change bool to true or false)
+  bool birthday = true;
+  
+  if(birthday) {
+    print('Happy BD ..');
+  } else {
+    print('Her birthday is not today');
+  }
+ 
+  // methods
+  var breaks = "------------8. methods------------";
+  print(breaks);
+}

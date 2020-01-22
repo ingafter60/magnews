@@ -34,6 +34,8 @@ def news_add(request):
 		newstxtshort = request.POST.get('newstxtshort')
 		newstxt = request.POST.get('newstxt')
 
+		print(newscat)
+
 		if newstitle == "" or newstxtshort == "" or newstxt == "":
 			
 			error = "All Fields Required ...."

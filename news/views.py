@@ -41,26 +41,32 @@ def news_add(request):
 			error = "All Fields Required ...."
 			return render(request, 'back/error.html', {'error':error})	
 
-		myfile = request.FILES['myfile']
-		fs = FileSystemStorage()
-		filename = fs.save(myfile.name, myfile)
-		url = fs.url(filename)	
+		try :
+			
+			myfile = request.FILES['myfile']
+			fs = FileSystemStorage()
+			filename = fs.save(myfile.name, myfile)
+			url = fs.url(filename)	
 
-		b = News(
-			name		  = newstitle,
-			short_text = newstxtshort,
-			body_text  = newstxt,
-			date 		  = "2020",
-			picname 	  = filename,
-			picurl 	  = url,
-			writer 	  = "-",
-			catname 	  = newscat,
-			catid 	  = 0,
-			show 		  = 0
-		)	
+			b = News(
+				name		  = newstitle,
+				short_text = newstxtshort,
+				body_text  = newstxt,
+				date 		  = "2020",
+				picname 	  = filename,
+				picurl 	  = url,
+				writer 	  = "-",
+				catname 	  = newscat,
+				catid 	  = 0,
+				show 		  = 0
+			)	
 
-		b.save()
-		return redirect('news_list')
+			b.save()
+			return redirect('news_list')
+
+		except:
+			error = "Please input your image"
+			return render(request, 'back/error.html', {'error':error})	
 
 	return render(request, 'back/news_add.html', {})	
 

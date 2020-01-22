@@ -53,6 +53,7 @@ def news_add(request):
 		)	
 
 		b.save()
+		return redirect('news_list')
 
 	return render(request, 'back/news_add.html', {})	
 

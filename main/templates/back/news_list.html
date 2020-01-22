@@ -36,15 +36,15 @@
 	            </tr>
 	         </thead>
 	         <tbody>
-	         	{% for nl in news %}
+	         	{% for nl in news %}<!-- nl = news list  -->
 	            <tr>
 	               <td class="text-center">{{nl.pk}}</td>
 	               <td class="text-center"><img src="{% static 'back/img/placeholders/avatars/avatar15.jpg' %}" alt="avatar" class="img-circle"></td>
 	               <td>{{nl.name}}</td>
 	               <td>{{nl.date}}</td>
-	               <td>-</td>
+	               <td>{{nl.catname}}</td>
 	               <td>{{nl.writer}}</td>
-	               <td>-</td>
+	               <td>{{nl.show}}</td>
 	               <td class="text-center">
 	                  <div class="btn-group">
 	                     <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"> Edit</i></a>

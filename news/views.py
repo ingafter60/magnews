@@ -38,8 +38,21 @@ def news_add(request):
 		if newstitle == "" or newstxtshort == "" or newstxt == "" or newscat == "" :
 			
 			error = "All Fields Required ...."
-
 			return render(request, 'back/error.html', {'error':error})	
+
+		b = News(
+			name		  = newstitle,
+			short_text = newstxtshort,
+			body_text  = newstxt,
+			date 		  = "2020",
+			pic 		  = "-",
+			writer 	  = "-",
+			catname 	  = newscat,
+			catid 	  = 0,
+			show 		  = 0
+		)	
+
+		b.save()
 
 	return render(request, 'back/news_add.html', {})	
 

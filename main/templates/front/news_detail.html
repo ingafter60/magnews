@@ -46,7 +46,7 @@
                         <div class="flex-wr-s-s p-b-40">
                            <span class="f1-s-3 cl8 m-r-15">
                            <a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-                           by {{ i.write }}
+                           by {{ i.writer }}
                            </a>
                            <span class="m-rl-3">-</span>
                            <span>
@@ -54,14 +54,15 @@
                            </span>
                            </span>
                            <span class="f1-s-3 cl8 m-r-15">
-                           5239 Views
+                           {{ i.show }}
                            </span>
                            <a href="#" class="f1-s-3 cl8 hov-cl10 trans-03 m-r-15">
                            0 Comment
                            </a>
                         </div>
                         <div class="wrap-pic-max-w p-b-30">
-                           <img src="{% static 'front/images/blog-list-01.jpg' %}" alt="IMG">
+                           <img src="{{i.pic}}" alt="IMG">
+                           <!-- <img src="{% static 'front/images/blog-list-01.jpg' %}" alt="IMG"> -->
                         </div>
                         <p class="f1-s-11 cl6 p-b-25">
                            {{ i.body_text }}
